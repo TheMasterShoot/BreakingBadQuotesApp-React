@@ -1,6 +1,6 @@
 # BreakingBad Quotes
 
-![Design preview for the BreakingBad Quotes app]( process.env.PUBLIC_URL + '/design/bbquotes.png')
+![Design preview for the BreakingBad Quotes app]( ./public/assets/design/bbquotes.png)
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
