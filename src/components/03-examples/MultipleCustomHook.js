@@ -12,9 +12,8 @@ export const MultipleCustomHook = () => {
     const {author, quote} = !!data && data[0]
 
   return (
-    <div>
-        <h3>BreakingBad Quotes</h3>
-        <hr/>
+    <div className='card' id='card'>
+        <p className='title'>BreakingBad Quotes</p>
 
         {
             loading ?
@@ -24,18 +23,20 @@ export const MultipleCustomHook = () => {
                     </div>
                 )
             :
-                (
-                    <blockquote className="blockquote text-end">
-                        <p >{quote}</p>
-                        <footer className="blockquote-footer">{author}</footer>
+                (   
+                    <blockquote className="blockquote text-center advice" id='advicetext'>
+                        <p >{ quote }</p>
+                        <footer className="blockquote-footer">{ author }</footer>
                     </blockquote>
                 )
         }
 
+        <img src={ process.env.PUBLIC_URL + "/assets/images/pattern-divider-desktop.svg" } alt='pattern-divider-desktop' className='divider'/>
+
         <button 
-            className='btn btn-primary'
-            onClick={increment}>
-                Next Quote
+            className='btn' id='btn'
+            onClick={ increment }>
+                <img src={ process.env.PUBLIC_URL + "/assets/images/icon-dice.svg" } alt='icon-dice' className='btn-img'/>
         </button>
 
     </div>

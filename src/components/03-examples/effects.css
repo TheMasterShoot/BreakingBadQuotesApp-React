@@ -1,3 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    /* colors */
+    /* primary */
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    /* neutral */
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+
+    /* font */
+    --manrope: 'Manrope', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    padding: 70px;
+    align-items: center;
+    background: var(--dark-blue);
+    display: flex;
+    font-family: var(--manrope);
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    background: var(--dark-grayish-blue);
+    border-radius: 13px;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.title {
+    color: var(--neon-green);
+    font-size: 14px;
+    letter-spacing: 3px;
+    padding-bottom: 14px;
+    text-transform: uppercase;
+}
+
+.advice {
+    color: #FFF;
+    font-size: 18px;
+    letter-spacing: 1.1px;
+    margin-bottom: 20px;
+}
+
+.divider {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 90%;
+}
+
+.btn {
+    background: var(--neon-green);
+    border: none;
+    border-radius: 50%;
+    bottom: -31px;
+    cursor: pointer;
+    left: 50%;
+    padding: 15px 17px;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: box-shadow 250ms;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 20px #53FFAA;
+}
+
+.btn-img {
+    transition: transform 250ms;
+}
+
+.btn-img:hover {
+    transform: rotate(135deg);
+}
+
+@media only screen and (max-width: 425px) {
+    .card {
+        margin: 0 12px;
+        padding: 20px;
+    }
 }
