@@ -1,6 +1,8 @@
  import React from 'react';
 import { useCounter } from '../../hooks/useCounter';
 import { useFetch } from '../../hooks/useFetch';
+import dado from "../../assets/images/icon-dice.svg";
+import divider from "../../assets/images/pattern-divider-desktop.svg"
 import './effects.css';
 
 export const MultipleCustomHook = () => {
@@ -31,12 +33,12 @@ export const MultipleCustomHook = () => {
                 )
         }
 
-        <img src={ process.env.PUBLIC_URL + "/assets/images/pattern-divider-desktop.svg" } alt='pattern-divider-desktop' className='divider'/>
+        <img src={ divider } alt='pattern-divider-desktop' className='divider'/>
 
         <button 
             className='btn' id='btn'
             onClick={ increment }>
-                <img src={ process.env.PUBLIC_URL + "/assets/images/icon-dice.svg" } alt='icon-dice' className='btn-img'/>
+                <img src={ dado } alt='icon-dice' className='btn-img'/>
         </button>
 
     </div>
